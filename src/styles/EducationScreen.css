@@ -1,0 +1,44 @@
+.educationscreen-wrapper form {
+  width: 100vh;
+  padding: 3vh;
+  padding-top: 5vh;
+  margin-top: 5vh;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.05), 
+              2px 2px 2px rgba(0,0,0,0.05),
+              4px 4px 4px rgba(0,0,0,0.05),
+              -1px -1px 1px rgba(0,0,0,0.05), 
+              -2px -2px 2px rgba(0,0,0,0.05),
+              -4px -4px 4px rgba(0,0,0,0.05);
+}
+
+.educationscreen-wrapper form label {
+  /* font-weight: bold;
+  color: black; */
+}
+.educationscreen-wrapper form input {
+  margin-bottom: 2vh;
+  background-color: var(--input-field-color);
+}
+.educationscreen-wrapper form input:focus {   
+  background-color: var(--input-field-color);
+  box-shadow: 2px 0 1px var(--background-blue-color) inset;
+  /* outline: 0 none; */
+}
+.educationscreen-wrapper form button {
+  background-color: var(--background-blue-color);
+  width: 15vh;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.25), 
+              2px 2px 2px rgba(0,0,0,0.25),
+              4px 4px 4px rgba(0,0,0,0.25);
+}
+.educationscreen-wrapper form button:hover {
+  background-color: var(--background-blue-color);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.35), 
+              2px 2px 2px rgba(0,0,0,0.35),
+              4px 4px 4px rgba(0,0,0,0.35),
+              -1px -1px 1px rgba(0,0,0,0.05), 
+              -2px -2px 2px rgba(0,0,0,0.05),
+              -4px -4px 4px rgba(0,0,0,0.05);
+}
