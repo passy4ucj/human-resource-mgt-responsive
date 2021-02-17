@@ -7,7 +7,7 @@ import Loader from '../components/Loader'
 import { getUserDetailsById, updateUser } from '../actions/userActions'
 import { USER_DETAILS_ID_RESET, USER_UPDATE_RESET } from '../constants/userConstants';
 import '../styles/FixedNavbar.css';
-import Header from '../components/Header';
+import AdminHeader2 from '../components/AdminHeader2';
 import '../styles/ProfileScreen.css';
 
 
@@ -78,7 +78,7 @@ const RoleEditScreen = ({ history, match }) => {
         <>
             {user.employee && (
             <Row className='ml-4 mr-4 py-4 profilescreen-wrapper'>
-            <Col md={3}>
+            <Col md={3} className='d-none d-md-block'>
             <div className="fixednavbar-wrapper">
       <div className='employee-details'>
         <p>{userInfo.role}</p>
@@ -129,8 +129,10 @@ const RoleEditScreen = ({ history, match }) => {
             </Nav>
             </div>
             </Col>
-            <Col md={8}>
-                <Header />
+
+
+            <Col className='col-xs-12 col-md-8'>
+                <AdminHeader2 />
                 <h1 className='page-header'>Update {user.employee.email} Role</h1>
                 {message && <Message variant='danger'>{message}</Message>}
                 {error && <Message variant='danger'>{error}</Message>}

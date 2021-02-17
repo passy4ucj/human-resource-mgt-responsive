@@ -7,7 +7,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap'
 import { logout } from '../actions/userActions';
 import '../styles/FixedNavbar.css';
 
-const AdminHeader = ({ history }) => {
+const AdminHeader2 = ({ history }) => {
 
     const dispatch = useDispatch()
 
@@ -136,4 +136,4 @@ const AdminHeader = ({ history }) => {
     )
 }
 
-export default AdminHeader;
+export default AdminHeader2;
