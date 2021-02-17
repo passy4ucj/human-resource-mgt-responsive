@@ -180,7 +180,12 @@ const StaffEditScreen = ({ history, match }) => {
                                 <option value='IT'>IT</option>
                                 <option value='PROJECT'>PROJECT</option>
                                 <option value='HR'>HR</option>
+                                <option value='MIS'>MIS</option>
+                                <option value='QUALITY-ASSURANCE'>QUALITY-ASSURANCE</option>
+                                <option value='TRAINING'>TRAINING</option>
+                                <option value='ADMIN'>ADMIN</option>
                                 <option value='OUTCESS'>OUTCESS</option>
+
                             </Form.Control>
                         </Form.Group>
                         <Form.Group  className="col-md-4" controlId='employeeCode'>
@@ -205,9 +210,15 @@ const StaffEditScreen = ({ history, match }) => {
                                 <option value=''>Select...</option>
                                 <option value='hr'>HR</option>
                                 <option value='employee'>EMPLOYEE</option>
+                                <option value='supervisor'>SUPERVISOR</option>
+                                <option value='admin'>ADMIN</option>
+                                <option value='hr-manager'>HR-MANAGER</option>
+                                <option value='trainer'>TRAINER</option>
+                                <option value='team-lead'>TEAM-LEAD</option>
+                                <option value='asst-manager'>ASST-MANAGER</option>
+                                <option value='IT-Support'>IT-SUPPORT</option>
                                 <option value='agent'>AGENT</option>
                                 <option value='manager'>MANAGER</option>
-                                <option value='admin'>ADMIN</option>
                             </Form.Control>
                         </Form.Group>
                         
