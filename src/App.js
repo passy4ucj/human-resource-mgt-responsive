@@ -17,6 +17,7 @@ import AdminProfileScreen from './screens/AdminProfileScreen';
 import AdminNextOfKinScreen from './screens/AdminNextOfKinScreen';
 import AdminEducationScreen from './screens/AdminEducationScreen';
 import MyLeaveApplicationScreen from './screens/MyLeaveApplicationScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <Route path='/admin/education/:id/edit' component={AdminEducationScreen} />
       <Route path='/admin/user/:id/edit' component={StaffEditScreen} exact/>
       <Route path='/admin/user/:id/role' component={RoleEditScreen} />
+      <Route path='/forgotpassword' component={ForgotPasswordScreen} />
       <Route path='/' component={LoginScreen} exact />
     </main>
     </Router>
