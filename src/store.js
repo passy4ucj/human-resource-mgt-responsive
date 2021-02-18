@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { userDeleteReducer, userDetailsByIdReducer, userDetailsReducer, userForgotPasswordReducer, userListReducer, userLoginReducer, userRegisterReducer, userUpdatePasswordReducer, userUpdateProfileReducer, userUpdateReducer } from './reducers/userReducers'
+import { userDeleteReducer, userDetailsByIdReducer, userDetailsReducer, userForgotPasswordReducer, userListReducer, userLoginReducer, userRegisterReducer, userResetPasswordReducer, userUpdatePasswordReducer, userUpdateProfileReducer, userUpdateReducer } from './reducers/userReducers'
 import { profileDetailsReducer, createProfileReducer, profileEmployeeIDDetailsReducer, profileUpdateReducer, createProfileEmpIdReducer } from './reducers/profileReducers'
 import { createNextOfKinEmpIdReducer, createNextOfKinReducer, nextOfKinDetailsEmployeeReducer, nextOfKinDetailsReducer, updateNextOfKinReducer } from './reducers/nextOfKinReducer'
 import { createEducationEmpIdReducer, createEducationReducer, educationDetailsEmployeeReducer, educationDetailsReducer, updateEducationReducer } from './reducers/educationReducers'
@@ -16,6 +16,7 @@ const reducer = combineReducers({
     userList: userListReducer,
     userRegister: userRegisterReducer,
     userForgotPassword: userForgotPasswordReducer,
+    userResetPassword: userResetPasswordReducer,
     userUpdate: userUpdateReducer,
     userDelete: userDeleteReducer,
     profileDetails: profileDetailsReducer,

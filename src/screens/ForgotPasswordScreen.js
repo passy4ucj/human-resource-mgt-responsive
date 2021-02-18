@@ -20,7 +20,7 @@ const override = css`
 
 const ForgotPasswordScreen = ({ history }) => {
     const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState(null)
 
     const dispatch = useDispatch()
 

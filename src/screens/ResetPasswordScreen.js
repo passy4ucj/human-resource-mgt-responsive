@@ -8,6 +8,7 @@ import LoginImg from '../img/call-center.jpg';
 import Logo from '../img/outcess-logo.png';
 import '../styles/LoginScreen.css';
 import { css } from '@emotion/css'
+import { resetPassword } from '../actions/userActions'
 
 //Can be a string as well. Need to ensure each key-value pair ends with ;
 const override = css`
@@ -16,19 +17,36 @@ const override = css`
   border-color: red;
 `;
 
-const ResetPasswordScreen = ({ history }) => {
+const ResetPasswordScreen = ({ history, match }) => {
+    const token = match.params.id  
+
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState(null)
 
     const dispatch = useDispatch()
 
-    const userForgotPassword = useSelector(state => state.userForgotPassword)
-    const { loading, error, success, user } = userForgotPassword
+    const userResetPassword = useSelector(state => state.userResetPassword)
+    const { loading, error, userInfo } = userResetPassword
+
+    useEffect(() => {
+        if(userInfo) {
+            history.push('/home')
+        } 
+    }, [history, userInfo])
 
     const submitHandler = (e) => {
         e.preventDefault()
         //Dispatch will go here
+        if(password !== confirmPassword) {
+            setMessage('Passwords do not match')
+        } else {
+            dispatch(resetPassword(
+                password,
+                token
+            ))
+            //history.push('/')
+        }
     }
 
     return (
@@ -45,6 +63,7 @@ const ResetPasswordScreen = ({ history }) => {
                     <img src={Logo}/>
                     </div>
                     {error && <Message variant='danger'>{error}</Message>}
+                    {message && <Message variant='danger'>{message}</Message>}
                     <Form onSubmit={submitHandler}>
                     <Form.Group className='form-group password' controlId="formBasicPassword">
                         <i class="fas fa-unlock pr-3"></i>
