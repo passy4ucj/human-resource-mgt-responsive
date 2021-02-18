@@ -8,8 +8,6 @@ import LoginImg from '../img/call-center.jpg';
 import Logo from '../img/outcess-logo.png';
 import '../styles/LoginScreen.css';
 import { css } from '@emotion/css'
-import { forgotPassword } from '../actions/userActions'
-import { USER_FORGOT_PASSWORD_RESET } from '../constants/userConstants'
 
 //Can be a string as well. Need to ensure each key-value pair ends with ;
 const override = css`
@@ -18,8 +16,9 @@ const override = css`
   border-color: red;
 `;
 
-const ForgotPasswordScreen = ({ history }) => {
-    const [email, setEmail] = useState('')
+const ResetPasswordScreen = ({ history }) => {
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
     const [message, setMessage] = useState('')
 
     const dispatch = useDispatch()
@@ -27,25 +26,9 @@ const ForgotPasswordScreen = ({ history }) => {
     const userForgotPassword = useSelector(state => state.userForgotPassword)
     const { loading, error, success, user } = userForgotPassword
 
-    useEffect(() => {
-        
-        if(success) {
-            // dispatch({
-            //     type: USER_FORGOT_PASSWORD_RESET
-            // })
-            //history.push('/')
-            //history.push(`/resetpassword/${user.resetToken}`)
-            setMessage(`If an account exists for ${email} you will recieve password reset instructions`)
-        }
-        
-    }, [success])
-
     const submitHandler = (e) => {
         e.preventDefault()
-        //dispatch 
-        dispatch(forgotPassword(email))
-        //history.push('/')
-        //setMessage(`If an account exists for ${email} you will recieve password reset instructions`)
+        //Dispatch will go here
     }
 
     return (
@@ -62,21 +45,28 @@ const ForgotPasswordScreen = ({ history }) => {
                     <img src={Logo}/>
                     </div>
                     {error && <Message variant='danger'>{error}</Message>}
-                    {success ? <Message variant='success'>{message}</Message> : <div></div>}
                     <Form onSubmit={submitHandler}>
-                    <Form.Group className='form-group email' controlId="formBasicEmail">
-                        <i class="fas fa-user pr-3"></i>
-                        <Form.Label className='login-label'>Email address</Form.Label>
+                    <Form.Group className='form-group password' controlId="formBasicPassword">
+                        <i class="fas fa-unlock pr-3"></i>
+                        <Form.Label className='login-label'>New Password</Form.Label>
                         <Form.Control 
-                            autoFocus 
-                            type="email" 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Enter email" />
+                            type="password" 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Password" />
+                    </Form.Group>
+                    <Form.Group className='form-group password' controlId="formBasicPassword">
+                        <i class="fas fa-unlock pr-3"></i>
+                        <Form.Label className='login-label'>Confirm Password</Form.Label>
+                        <Form.Control 
+                            type="password" 
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            placeholder="Password" />
                     </Form.Group>
 
                     <Button type='submit' variant='primary' className='btn btn-block'>
-                        Submit
+                        Reset Password
                     </Button>
                     <Link to='/' className='forget-password'>
                         <p>Sign-In</p>
@@ -101,4 +91,4 @@ const ForgotPasswordScreen = ({ history }) => {
     )
 }
 
-export default ForgotPasswordScreen
+export default ResetPasswordScreen
