@@ -9,6 +9,7 @@ import Logo from '../img/outcess-logo.png';
 import '../styles/LoginScreen.css';
 import { login } from '../actions/userActions'
 import { css } from '@emotion/css'
+import { USER_FORGOT_PASSWORD_RESET } from '../constants/userConstants';
 
 
 //Can be a string as well. Need to ensure each key-value pair ends with ;
@@ -32,7 +33,12 @@ const LoginTestScreen = ({ history }) => {
     
     useEffect(() => {
         if(userInfo) {
+          
             history.push('/home')
+        } else {
+          dispatch({
+            type: USER_FORGOT_PASSWORD_RESET
+          })
         }
     }, [history, userInfo])
     

@@ -165,7 +165,15 @@ const RoleEditScreen = ({ history, match }) => {
                                 <option value=''>Select...</option>
                                 <option value='hr'>HR</option>
                                 <option value='employee'>EMPLOYEE</option>
+                                <option value='supervisor'>SUPERVISOR</option>
+                                <option value='admin'>ADMIN</option>
+                                <option value='hr-manager'>HR-MANAGER</option>
+                                <option value='trainer'>TRAINER</option>
+                                <option value='team-lead'>TEAM-LEAD</option>
+                                <option value='asst-manager'>ASST-MANAGER</option>
+                                <option value='IT-Support'>IT-SUPPORT</option>
                                 <option value='agent'>AGENT</option>
+                                <option value='manager'>MANAGER</option>
                             </Form.Control>
                         </Form.Group>
                         <Form.Group controlId='employeeCode'>
