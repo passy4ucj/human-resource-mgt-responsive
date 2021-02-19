@@ -70,6 +70,7 @@ const MyLeave = () => {
             <th>Date Applied</th>
             <th>Leave Type</th>
             <th>Duration</th>
+            <th>Reason</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -78,18 +79,21 @@ const MyLeave = () => {
             <td>Jan 5, 2020</td>
             <td>Sick leave</td>
             <td>Jan 11, 2020 - Jan 14, 2020</td>
+            <td>Malaria and Typhoid fever</td>
             <td>Approved</td>
           </tr>
           <tr>
             <td>Oct 10, 2020</td>
             <td>Paid leave</td>
             <td>Oct 15, 2020 - Oct 17, 2020</td>
+            <td>Paid Leave</td>
             <td>Approved</td>
           </tr>
           <tr>
             <td>Feb 18, 2021</td>
             <td>Sick leave</td>
             <td>Feb 19, 2021 - Feb 22, 2021</td>
+            <td>Malaria and Typhoid fever</td>
             <td>Pending</td>
           </tr>
         </tbody>
