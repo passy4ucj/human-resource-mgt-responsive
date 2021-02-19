@@ -64,7 +64,7 @@ const FixedNavbar = ({ history }) => {
           (userInfo.role === 'hr' || userInfo.role === 'hr-manager' || userInfo.role === 'admin') && (
         <>
           <hr />
-          <NavLink to='/myleave' exact className="nav-link" activeClassName='active-here'>
+          <NavLink to='/leaveapplications' exact className="nav-link" activeClassName='active-here'>
             <i class="fas fa-box-open pr-4"></i>
             Leave Applications
           </NavLink>

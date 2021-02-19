@@ -28,7 +28,7 @@ const MyLeave = () => {
           <Form>
             <Form.Group controlId="formGridState">
               <Form.Label>Leave Type</Form.Label>
-              <Form.Control as="select" defaultValue="select">
+              <Form.Control as="select" defaultValue="select" custom>
                 <option>Paid Leave</option>
                 <option>Sick Leave</option>
                 <option>Maternity Leave</option>

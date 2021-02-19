@@ -19,6 +19,7 @@ import AdminEducationScreen from './screens/AdminEducationScreen';
 import MyLeaveApplicationScreen from './screens/MyLeaveApplicationScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
+import AllLeaveApplications from './screens/AllLeaveApplications';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <Route path='/education' component={EducationScreen} />
       <Route path='/dashboard' component={DashboardScreen} />
       <Route path='/myleave' component={MyLeaveApplicationScreen} />
+      <Route path='/leaveapplications' component={AllLeaveApplications} />
       <Route path='/updatepassword' component={PasswordScreen} />
       <Route path='/admin/userlist' component={StaffListScreen} exact/>
       <Route path='/admin/userlist/search/:keyword' component={StaffListScreen} />
