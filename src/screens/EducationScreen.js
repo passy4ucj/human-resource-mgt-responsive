@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { EDUCATION_CREATE_RESET, EDUCATION_DETAILS_RESET, EDUCATION_UPDATE_RESET } from '../constants/educationConstants'
 import { createEducation, getEducationDetails, updateEducation } from '../actions/educationActions';
 import FixedNavbar from '../components/FixedNavbar';
-import '../styles/EducationScreen.css';
 import Header from '../components/Header';
 
 const EducationScreen = ({ history }) => {

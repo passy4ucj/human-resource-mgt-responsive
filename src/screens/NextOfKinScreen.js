@@ -103,7 +103,7 @@ const NextOfKinScreen = ({ history }) => {
             </Col>
             <Col className='col-xs-12 col-md-8'>
             <Header />
-                <h1>Next Of Kin</h1>
+                <h1 className='page-header'>Next Of Kin</h1>
                
                 {errorCreate && <Message variant='danger'>{errorCreate}</Message>}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}

@@ -6,7 +6,7 @@ import Message from '../components/Message'
 import { updateUserPassword } from '../actions/userActions'
 import { USER_UPDATE_PASSWORD_RESET } from '../constants/userConstants';
 import '../styles/FixedNavbar.css';
-import Header from '../components/Header';
+import AdminHeader2 from '../components/AdminHeader2';
 import '../styles/ProfileScreen.css';
 
 
@@ -72,9 +72,9 @@ const PasswordScreen = ({ history }) => {
         </Toast>
          </Col>
          </Row>
+
         <Row className='ml-4 mr-4 py-4 profilescreen-wrapper'>
-        
-        <Col md={3}>
+          <Col md={3} className='d-none d-md-block'>
         <div className="fixednavbar-wrapper">
       <div className='employee-details'>
         <p>{userInfo.role}</p>
@@ -125,8 +125,10 @@ const PasswordScreen = ({ history }) => {
             </Nav>
             </div>
             </Col>
-            <Col md={8}>
-                <Header />
+
+
+            <Col className='col-xs-12 col-md-8'>
+                <AdminHeader2 />
                 <h1 className='page-header'>Update Password</h1>
                 {message && <Message variant='danger'>{message}</Message>}
                 {error && <Message variant='danger'>{error}</Message>}
@@ -172,4 +174,4 @@ const PasswordScreen = ({ history }) => {
     )
 }
 
-export default PasswordScreen
+export default PasswordScreen;

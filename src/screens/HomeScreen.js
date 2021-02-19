@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import { Table, Button, Row, Col, Form } from 'react-bootstrap'
+import { Button, Row, Col, Form } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserDetails } from '../actions/userActions'
 import '../styles/ProfileScreen.css';
@@ -37,7 +37,7 @@ const HomeScreen = ({ history }) => {
           <Header />
           <h1 className='page-header'>Home</h1>
           
-          <Form key={user._id}>
+          <Form key={user.id}>
                 <Form.Row>
                   <Form.Group className="col-md-4">
                     <Form.Label>First Name</Form.Label>
@@ -109,46 +109,6 @@ const HomeScreen = ({ history }) => {
                 </Link>
                 )}
               </Form>
-
-              
-
-        {/* <Table striped bordered hover className='table-sm mr-4 ml-3 home-table'>
-          <thead>
-            <tr>
-                    <th>EMPLOYEE ID</th>
-                    <th>FIRST NAME</th>
-                    <th>MIDDLE NAME</th>
-                    <th>LAST NAME</th>
-                    <th>EMAIL</th>
-                    <th>ROLE</th>
-                    <th>DEPARTMENT</th>
-                    <th>ACTION</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                <tr key={user._id}>
-                    <td>{user.employeeCode}</td>
-                    <td>{user.firstname}</td>
-                    <td>{user.middlename}</td>
-                    <td>{user.lastname}</td>
-                    <td><a href={`mailto:${user.email}`}>{user.email}</a></td>
-                    <td>{user.role}</td>
-                    <td>{user.department}</td>
-                    {userInfo && (
-                    <td>
-                        <Link to='/dashboard'>
-                            <Button variant='light' className='btn-sm'>
-                                <i className='fas fa-edit'></i>
-                            </Button>
-                        </Link>
-                        
-                    </td>
-                    )}
-                </tr>
-                
-            </tbody>
-        </Table> */}
         </Col>
         </Row>
         </>
