@@ -10,7 +10,7 @@ const MyLeave = () => {
   return (
     <Container>
       <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} className='applyleave applyleave-btn'>
         Apply Leave
       </Button>
 
@@ -19,31 +19,37 @@ const MyLeave = () => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-        className='myleave-modal'
+        className="myleave-modal"
       >
         <Modal.Header closeButton>
           <Modal.Title>Apply for Leave</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Group>
-              <Form.Label>Enter Info</Form.Label>
-              <Form.Control type="text" placeholder="...." />
+            <Form.Group controlId="formGridState">
+              <Form.Label>Leave Type</Form.Label>
+              <Form.Control as="select" defaultValue="select">
+                <option>Paid Leave</option>
+                <option>Sick Leave</option>
+                <option>Maternity Leave</option>
+                <option>Paternity Leave</option>
+              </Form.Control>
+            </Form.Group>
+            <Form.Group controlId='startDate'>
+              <Form.Label>Start Date</Form.Label>
+              <Form.Control type='date' placeholder='Start Date'></Form.Control>
+            </Form.Group>
+            <Form.Group controlId='endDate'>
+              <Form.Label>End Date</Form.Label>
+              <Form.Control type='date' placeholder='End Date'></Form.Control>
             </Form.Group>
             <Form.Group>
-              <Form.Label>Enter Info</Form.Label>
-              <Form.Control type="text" placeholder="..." />
+              <Form.Label>Reason</Form.Label>
+              <Form.Control type="text" placeholder="Detailed reason for leave application" />
             </Form.Group>
             <Form.Group>
-              <Form.Label>Enter Info</Form.Label>
-              <Form.Control type="text" placeholder="..." />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Enter Info</Form.Label>
-              <Form.Control type="text" placeholder="..." />
-            </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Notify me" />
+              <Form.Label>Status</Form.Label>
+              <Form.Control placeholder="Pending" disabled />
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -51,14 +57,14 @@ const MyLeave = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button onClick={handleClose}>
+          <Button onClick={handleClose} className='applyleave-btn'>
             Submit
           </Button>
         </Modal.Footer>
       </Modal>
     </>
 
-      <Table striped bordered hover size="sm">
+      <Table striped bordered hover size="sm" className='myleave-table'>
         <thead>
           <tr>
             <th>Date Applied</th>

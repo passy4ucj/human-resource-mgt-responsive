@@ -28,7 +28,7 @@ const MyLeaveApplicationScreen = ({ history }) => {
         </Col>
         <Col className='col-xs-12 col-md-8'>
           <Header />
-					<h1 className='page-header'>LEAVE</h1>
+					<h1 className='page-header'>MY LEAVE</h1>
 					<hr />
 					<div className='myleave-wrapper'>
             <MyLeave />
