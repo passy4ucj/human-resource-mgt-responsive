@@ -307,7 +307,8 @@ const ProfileScreen = ({ history }) => {
                                     as="select" 
                                     size='sm'
                                     value={gender}
-                                    onChange={(e) => setGender(e.target.value)}>
+                                    onChange={(e) => setGender(e.target.value)}
+                                    custom>
                                         <option value=''>Select...</option>
                                         <option value='MALE'>MALE</option>
                                         <option value='FEMALE'>FEMALE</option>
