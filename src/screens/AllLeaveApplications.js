@@ -26,7 +26,6 @@ const AllLeaveApplications = ({ history }) => {
         <Col className='col-xs-12 col-md-10'>
           <Header />
 					<h1 className='page-header'>LEAVE APPLICATIONS</h1>
-					<hr />
 					<Table striped bordered hover size="sm" className='myleave-table'>
         <thead>
           <tr>

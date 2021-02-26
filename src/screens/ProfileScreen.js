@@ -128,7 +128,7 @@ const ProfileScreen = ({ history }) => {
             </Col>
             <Col className='col-xs-12 col-md-8'>
             <Header />
-                <h1>My Profile</h1>
+                <h1 className='page-header'>My Profile</h1>
                
                 {errorCreate && <Message variant='danger'>{errorCreate}</Message>}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}

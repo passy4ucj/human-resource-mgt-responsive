@@ -44,7 +44,7 @@ const HomeScreen = ({ history }) => {
                     <Form.Control 
                     	type="text"
                     	placeholder={user.firstname}
-                      readOnly
+                      disabled
                     ></Form.Control>
                   </Form.Group>
                   <Form.Group className="col-md-4">
@@ -52,7 +52,7 @@ const HomeScreen = ({ history }) => {
                     <Form.Control 
                       type="text"
                       placeholder={user.middlename}
-                      readOnly
+                      disabled
                     ></Form.Control>
                   </Form.Group>
                   <Form.Group className="col-md-4">
@@ -60,7 +60,7 @@ const HomeScreen = ({ history }) => {
                     <Form.Control 
                     	type="text"
                     	placeholder={user.lastname}
-                      readOnly
+                      disabled
                     ></Form.Control>
                   </Form.Group>
                 </Form.Row>
@@ -71,7 +71,7 @@ const HomeScreen = ({ history }) => {
                     <Form.Control 
                       type="text"
                       placeholder={user.employeeCode}
-                      readOnly
+                      disabled
                     ></Form.Control>
                 	</Form.Group>
                 	<Form.Group className="col-md-6">
@@ -79,7 +79,7 @@ const HomeScreen = ({ history }) => {
                     <Form.Control 
                       type="text"
                       placeholder={user.department}
-                      readOnly
+                      disabled
                     ></Form.Control>
                   </Form.Group>
                 </Form.Row>
@@ -89,7 +89,7 @@ const HomeScreen = ({ history }) => {
                     <Form.Control 
                       type="text"
                       placeholder={user.role}
-                      readOnly
+                      disabled
                     ></Form.Control>
                 	</Form.Group>
                 	<Form.Group className="col-md-6">
@@ -97,7 +97,7 @@ const HomeScreen = ({ history }) => {
                     <Form.Control 
                       type="text"
                       placeholder={user.email}
-                      readOnly
+                      disabled
                     ></Form.Control>
                   </Form.Group>
                 </Form.Row>

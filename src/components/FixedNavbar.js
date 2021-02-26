@@ -56,16 +56,15 @@ const FixedNavbar = ({ history }) => {
           Education
         </NavLink>
         <NavLink to='/myleave' exact className="nav-link" activeClassName='active-here'>
-          <i class="fas fa-sign-out-alt pr-4"></i>
+        <i class="fas fa-paper-plane pr-4"></i>
           My Leave
         </NavLink>
 
         {
           (userInfo.role === 'hr' || userInfo.role === 'hr-manager' || userInfo.role === 'admin') && (
         <>
-          <hr />
           <NavLink to='/leaveapplications' exact className="nav-link" activeClassName='active-here'>
-            <i class="fas fa-box-open pr-4"></i>
+            <i class="fas fa-folder-open pr-4"></i>
             Leave Applications
           </NavLink>
           <NavLink to='/admin/userlist' exact className="nav-link" activeClassName='active-here'>
@@ -79,6 +78,13 @@ const FixedNavbar = ({ history }) => {
         </>
         )
         }
+
+        {/* <div className='fixednavbar-logout'>
+          <NavLink to='/' exact className="nav-link" activeClassName='active-here'>
+            <i class="fas fa-sign-out-alt pr-4"></i>
+            Logout
+          </NavLink>
+        </div> */}
       </Nav>
     </div>
   );
